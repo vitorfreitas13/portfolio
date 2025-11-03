@@ -1,0 +1,187 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Cores principais */
+:root {
+    --cor-principal: #3B82F6;
+    --cor-secundaria: #111827;
+    --padding-menu: 10px 20px;
+}
+
+/* Reset e box-sizing global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    background-color: var(--cor-principal);
+    width: 100%;
+    min-height: 100vh;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inicio {
+    color: white;
+    text-align: center;
+    padding: 10vh 20px 5vh;
+}
+
+.inicio h1 {
+    font-size: 3rem;
+}
+
+.inicio h2 {
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+/* Navegação principal */
+header nav {
+    text-align: center;
+    margin-top: 30px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: var(--cor-secundaria);
+    padding: 10px 25px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #F9FAFB;
+    color: var(--cor-secundaria);
+}
+
+/* Container das seções */
+.container {
+    background-color: #D1D5DB;
+    width: 100%;
+    padding: 40px 20px;
+}
+
+/* Seções principais */
+.about, .projects, .skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    min-height: 80vh;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+
+    /* Mantém a seção visível ao clicar em links */
+    scroll-margin-top: 100px;
+}
+
+/* Footer */
+.rodape {
+    background-color: var(--cor-secundaria);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.rodape ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+.rodape ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.rodape ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.rodape ul li a:hover {
+    color: var(--cor-principal);
+}
+
+/* Botão Início */
+.btn-topo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--cor-principal);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+
+.btn-topo:hover {
+    background-color: #2563EB;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .inicio h1 {
+        font-size: 2.2rem;
+    }
+
+    .inicio h2 {
+        font-size: 1.5rem;
+    }
+
+    header nav ul li a {
+        padding: 8px 20px;
+    }
+
+    .about, .projects, .skills {
+        padding: 40px 15px;
+        scroll-margin-top: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .inicio h1 {
+        font-size: 1.8rem;
+    }
+
+    .inicio h2 {
+        font-size: 1.2rem;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
