@@ -40,7 +40,8 @@ html {
 }
 
 .inicio h1 {
-    font-size: 3rem;
+    font-size: 4rem;
+    transition: 0.3s;
 }
 
 .inicio h2 {
@@ -101,6 +102,67 @@ header nav ul li a:hover {
     /* Mantém a seção visível ao clicar em links */
     scroll-margin-top: 100px;
 }
+
+/* --- Estilos do Grid de Projetos --- */
+
+/* 1. Estilo do Container (O Grid) */
+.project-grid {
+    width: 100%; /* Ocupa toda a largura do seu .container */
+    max-width: 1200px; /* Limita a largura total do grid */
+    margin-top: 30px;
+    display: grid;
+    gap: 20px; /* Espaçamento entre os cartões */
+
+    /* A MÁGICA DO RESPONSIVO! */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* Explicação: 
+       - auto-fit: Cria o máximo de colunas que couber.
+       - minmax(280px, 1fr): Cada coluna terá no mínimo 280px de largura.
+         Se houver espaço extra, ele é distribuído igualmente (1fr).
+         Quando não houver espaço para mais de 280px, ele quebra a linha!
+    */
+}
+
+/* 2. Estilo do Cartão Individual */
+.project-card {
+    display: block; /* Para garantir que o link ocupe todo o espaço */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Garante que a imagem siga o border-radius */
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Efeito de elevação sutil */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px; /* Altura fixa para o thumbnail (ou use object-fit: cover) */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: var(--cor-principal);
+}
+
+.view-details {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #4B5563;
+}
+
 
 /* Footer */
 .rodape {
