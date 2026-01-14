@@ -6,10 +6,19 @@
     box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     font-family: "Poppins", sans-serif;
     padding-top: 80px; /* espaço para o header fixo */
 }
+
+section {
+    margin-bottom: 80px;
+}
+
 
 /* HEADER */
 #cabecalho {
@@ -71,24 +80,25 @@ body {
 }
 
 /* CLASSE SEGURA PARA TELA CHEIA */
-.tela-cheia {
-    min-height: 350px;
-}
+
+
 
 
 /* INÍCIO */
 #inicio {
     padding-top: 60px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+    gap: 20px;
 
-#inicio2 {
     text-align: center;
     color: #fff;
-
+    min-height: 80vh;
 }
+
+
 
 #inicio2 h1 {
     font-size: 2.8rem;
@@ -110,14 +120,36 @@ body {
     padding: 80px 20px;
     text-align: center;
     min-height: 450px;
+
 }
 
 #sobre h1 {
     font-size: 2.2rem;
     margin-bottom: 20px;
+    
 }
 
 #sobre p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.tela-2 {
+    padding: 80px 20px;
+    color: #fff;
+    text-align: center;
+    min-height: 450px;
+}
+
+
+#habilidades h1 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+#habilidades p {
     max-width: 800px;
     margin: auto;
     line-height: 1.6;
