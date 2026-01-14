@@ -1,87 +1,55 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <title>Vitor Freitas | Portfólio</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="stylesheet" href="estilos/style.css">
 </head>
 
-<body id="topo">
+<body>
+    <header id="cabecalho">
+        <a href="#inicio" class="logo">Portfólio</a>
 
-    <!-- Cabeçalho -->
-    <header class="cabecalho">
-        <div class="inicio">
-            <h1>Meu Portfólio</h1>
-            <h2>Desenvolvedor Web</h2>
-        </div>
+        <span class="material-symbols-outlined menu-icon" onclick="clickMenu()">
+            menu
+        </span>
 
-        <nav>
-            <ul>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#projects">Projetos</a></li>
-                <li><a href="#skills">Habilidades</a></li>
-            </ul>
+        <nav id="menu">
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#projetos">Projetos</a>
         </nav>
     </header>
 
-    <!-- Seções -->
-    <main>
-        <section id="about" class="about container">
-            <h2>Sobre Mim</h2>
-            <p>Descrição sobre você...</p>
+    <main id="container">
+
+        <section id="inicio" class="tela-cheia">
+            <img id="vitor" src="imagens/vitor1.png" alt="Foto de Vitor Freitas">
         </section>
 
-        <section id="projects" class="projects container">
-            <h2>Projetos</h2>
-
-            <div class="project-grid">
-                <a href="https://vitorfreitas13.github.io/projeto-coffe/" target="_blank" class="project-card">
-                    <img src="imagens/projeto1-thumb.jpg" alt="Miniatura do Projeto 1">
-                    <div class="card-content">
-                        <h3>Coffe Store</h3>
-                        <p>Breve descrição das tecnologias usadas (HTML, CSS, JS).</p>
-                        <span class="view-details">Ver Detalhes →</span>
-                    </div>
-                </a>
-
-                <a href="https://vitorfreitas13.github.io/projeto-tela-login/" target="_blank" class="project-card">
-                    <img src="imagens/projeto2-thumb.jpg" alt="Miniatura do Projeto 2">
-                    <div class="card-content">
-                        <h3>Login Page</h3>
-                        <p>Foco em Flexbox e design responsivo.</p>
-                        <span class="view-details">Ver Detalhes →</span>
-                    </div>
-                </a>
-
-            </div>
-
+        <section id="inicio2" class="tela-cheia">
+            <h1>Vitor Freitas</h1>
+            <p>Desenvolvedor Full Stack Júnior</p>
         </section>
 
-        <section id="skills" class="skills container">
-            <h2>Habilidades</h2>
-            <p>Minhas habilidades...</p>
+        <section id="sobre" class="tela-cheia">
+            <h1>Sobre Mim</h1>
+            <p>
+                Sou desenvolvedor Full Stack Júnior e atualmente curso Ciência da Computação.
+                Tenho contato com hardware e software desde 2012, construindo uma base sólida em tecnologia.
+                Atualmente estudo frameworks front-end e back-end, aplicando o aprendizado em projetos práticos.
+                Busco minha primeira oportunidade para aprender, evoluir e contribuir com código de qualidade.
+            </p>
         </section>
+
     </main>
 
-    <!-- Botão Início -->
-    <a href="#topo" class="btn-topo">Início</a>
-
-    <!-- Rodapé -->
-    <footer class="rodape">
-        <ul>
-            <li><a href="#topo">Topo</a></li>
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#projects">Projetos</a></li>
-            <li><a href="#skills">Habilidades</a></li>
-        </ul>
-        <p>&copy; 2025 Meu Portfólio</p>
-    </footer>
-
+    <script src="script.js"></script>
 </body>
 
 </html>

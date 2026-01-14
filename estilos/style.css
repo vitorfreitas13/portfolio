@@ -1,249 +1,142 @@
-@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-/* Cores principais */
-:root {
-    --cor-principal: #3B82F6;
-    --cor-secundaria: #111827;
-    --padding-menu: 10px 20px;
-}
-
-/* Reset e box-sizing global */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
     font-family: "Poppins", sans-serif;
+    padding-top: 80px; /* espaço para o header fixo */
 }
 
-html {
-    scroll-behavior: smooth;
-}
+/* HEADER */
+#cabecalho {
+    background: #000;
+    color: #fff;
+    padding: 15px 20px;
 
-/* Cabeçalho */
-.cabecalho {
-    background-color: var(--cor-principal);
-    width: 100%;
-    min-height: 100vh;
-    padding-bottom: 40px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-}
 
-.inicio {
-    color: white;
-    text-align: center;
-    padding: 10vh 20px 5vh;
-}
-
-.inicio h1 {
-    font-size: 4rem;
-    transition: 0.3s;
-}
-
-.inicio h2 {
-    font-size: 2rem;
-    margin-top: 10px;
-}
-
-/* Navegação principal */
-header nav {
-    text-align: center;
-    margin-top: 30px;
-}
-
-header nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-header nav ul li {
-    display: inline-block;
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    background-color: var(--cor-secundaria);
-    padding: 10px 25px;
-    border-radius: 20px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-header nav ul li a:hover {
-    background-color: #F9FAFB;
-    color: var(--cor-secundaria);
-}
-
-/* Container das seções */
-.container {
-    background-color: #D1D5DB;
-    width: 100%;
-    padding: 40px 20px;
-}
-
-/* Seções principais */
-.about, .projects, .skills {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 60px 20px;
-    min-height: 80vh;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-
-    /* Mantém a seção visível ao clicar em links */
-    scroll-margin-top: 100px;
-}
-
-/* --- Estilos do Grid de Projetos --- */
-
-/* 1. Estilo do Container (O Grid) */
-.project-grid {
-    width: 100%; /* Ocupa toda a largura do seu .container */
-    max-width: 1200px; /* Limita a largura total do grid */
-    margin-top: 30px;
-    display: grid;
-    gap: 20px; /* Espaçamento entre os cartões */
-
-    /* A MÁGICA DO RESPONSIVO! */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    /* Explicação: 
-       - auto-fit: Cria o máximo de colunas que couber.
-       - minmax(280px, 1fr): Cada coluna terá no mínimo 280px de largura.
-         Se houver espaço extra, ele é distribuído igualmente (1fr).
-         Quando não houver espaço para mais de 280px, ele quebra a linha!
-    */
-}
-
-/* 2. Estilo do Cartão Individual */
-.project-card {
-    display: block; /* Para garantir que o link ocupe todo o espaço */
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Garante que a imagem siga o border-radius */
-    text-decoration: none;
-    color: var(--cor-secundaria);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px); /* Efeito de elevação sutil */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-.project-card img {
-    width: 100%;
-    height: 200px; /* Altura fixa para o thumbnail (ou use object-fit: cover) */
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
-}
-
-.card-content {
-    padding: 15px;
-}
-
-.card-content h3 {
-    margin-top: 0;
-    font-size: 1.5rem;
-    color: var(--cor-principal);
-}
-
-.view-details {
-    display: inline-block;
-    margin-top: 10px;
-    font-weight: 600;
-    color: #4B5563;
-}
-
-
-/* Footer */
-.rodape {
-    background-color: var(--cor-secundaria);
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
-
-.rodape ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 10px 0;
-}
-
-.rodape ul li {
-    display: inline-block;
-    margin: 0 15px;
-}
-
-.rodape ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.rodape ul li a:hover {
-    color: var(--cor-principal);
-}
-
-/* Botão Início */
-.btn-topo {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: var(--cor-principal);
-    color: white;
-    padding: 10px 15px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
+    top: 0;
+    width: 100%;
     z-index: 1000;
 }
 
-.btn-topo:hover {
-    background-color: #2563EB;
+.logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 40px;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .inicio h1 {
-        font-size: 2.2rem;
-    }
-
-    .inicio h2 {
-        font-size: 1.5rem;
-    }
-
-    header nav ul li a {
-        padding: 8px 20px;
-    }
-
-    .about, .projects, .skills {
-        padding: 40px 15px;
-        scroll-margin-top: 70px;
-    }
+.menu-icon {
+    cursor: pointer;
+    font-size: 32px;
 }
 
-@media (max-width: 480px) {
-    .inicio h1 {
-        font-size: 1.8rem;
+/* MENU */
+#menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+
+    width: 100%;
+    background: #000;
+    text-align: center;
+}
+
+#menu a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+#menu a:hover {
+    background: #222;
+}
+
+#menu.ativo {
+    display: block;
+}
+
+/* CONTAINER */
+#container {
+    background-color: #222;
+}
+
+/* CLASSE SEGURA PARA TELA CHEIA */
+.tela-cheia {
+    min-height: calc(100vh - 80px);
+}
+
+
+/* INÍCIO */
+#inicio {
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#inicio2 {
+    text-align: center;
+    color: #fff;
+}
+
+#inicio2 h1 {
+    font-size: 2.8rem;
+}
+
+/* IMAGEM */
+#vitor {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 0px 6px rgb(201, 200, 200);
+}
+
+/* SOBRE */
+#sobre {
+    background-color: #fff;
+    color: #000;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#sobre h1 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+#sobre p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+    .menu-icon {
+        display: none;
     }
 
-    .inicio h2 {
-        font-size: 1.2rem;
+    #menu {
+        display: flex;
+        position: static;
+        width: auto;
+        background: transparent;
     }
 
-    header nav ul li {
-        display: block;
-        margin: 10px 0;
+    #menu a {
+        display: inline-block;
+        padding: 0 15px;
     }
 }
