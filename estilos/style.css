@@ -7,12 +7,13 @@
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: "Poppins", sans-serif;
-    padding-top: 80px; /* espaço para o header fixo */
+    padding-top: 80px;
+    /* espaço para o header fixo */
 }
 
 section {
@@ -126,7 +127,7 @@ section {
 #sobre h1 {
     font-size: 2.2rem;
     margin-bottom: 20px;
-    
+
 }
 
 #sobre p {
@@ -154,6 +155,54 @@ section {
     margin: auto;
     line-height: 1.6;
     font-size: 1rem;
+}
+
+.projetos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  background-color: #fff;
+}
+
+.projetos > h1 {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.projeto {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.projeto h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+.projeto p {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+
+.projeto img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0; /* borda arredondada só em cima */
+  display: block;
+  margin-bottom: 15px;
+  object-fit: cover; /* para a imagem cobrir o espaço sem distorcer */
+  max-height: 150px; /* altura máxima, ajusta conforme quiser */
 }
 
 /* DESKTOP */
