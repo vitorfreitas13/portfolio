@@ -5,15 +5,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 /* BODY */
-body {
-  font-family: "Poppins", sans-serif;
+body { 
   padding-top: 80px;
   background: #222;
   color: #fff;
   overflow-x: hidden;
+
 }
 
 #inicio {
@@ -128,7 +129,7 @@ body.dark #theme-toggle span {
 
 /* SEÇÃO INICIAL */
 .tela-cheia {
-  min-height: 80vh;
+  min-height: 85vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -146,8 +147,15 @@ body.dark #theme-toggle span {
 }
 
 /* TEXTOS GERAIS */
-#container h1 {
-  font-size: 4rem;
+
+.titulos {
+  font-size: 2.8rem;
+  text-align: center;
+}
+
+.div-1 p {
+  line-height: 30px;
+  font-weight: 100;
 }
 
 #container p {
@@ -162,9 +170,6 @@ body.dark #theme-toggle span {
   text-align: center;
 }
 
-#sobre h1 {
-  font-size: 2.3rem;
-}
 
 #sobre p {
   font-size: 1.3rem;
@@ -179,9 +184,6 @@ body.dark #theme-toggle span {
   text-align: center;
 }
 
-.tela-2 h1 {
-  font-size: 2.3rem;
-}
 
 .tela-2 p {
   font-size: 1.3rem;
@@ -205,6 +207,20 @@ body.dark #theme-toggle span {
   text-align: center;
 }
 
+.projetos h2, p {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #121212;
+}
+
+a:hover {
+  color: red;
+  transition: 0.3s;
+}
+
 .projeto {
   background: #eee;
   padding: 15px;
@@ -220,6 +236,32 @@ body.dark #theme-toggle span {
 footer {
   height: 300px;
   background-color: #222;
+  text-align: center;
+}
+
+footer button {
+  background: green;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  
+  cursor: pointer;
+}
+
+footer button a {
+  color: white;
+}
+
+footer button:hover{
+  background-color: #fff;
+  color: green;
+  transition: 0.5s;
+  scale: calc(1.1);
+}
+
+
+footer h3 {
+  margin-top: 50px;
 }
 
 /* DARK MODE */
