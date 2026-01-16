@@ -1,18 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* BODY */
 body {
   font-family: "Poppins", sans-serif;
   padding-top: 80px;
   background: #222;
   color: #fff;
+  overflow-x: hidden;
 }
 
+/* HEADER */
 #cabecalho {
   background: #000;
   padding: 15px 20px;
@@ -22,6 +26,7 @@ body {
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 1000;
 }
 
 .logo {
@@ -35,6 +40,7 @@ body {
   font-size: 32px;
 }
 
+/* MENU MOBILE */
 #menu {
   display: none;
   position: absolute;
@@ -56,69 +62,7 @@ body {
   display: block;
 }
 
-
-.tela-cheia {
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-#vitor {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-#sobre {
-  background: #fff;
-  color: #000;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.tela-2 {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.projetos {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 40px;
-  background: #fff;
-  color: #000;
-}
-
-.projetos h1 {
-  grid-column: 1 / -1;
-  text-align: center;
-}
-
-.projeto {
-  background: #eee;
-  padding: 15px;
-  border-radius: 8px;
-}
-
-.projeto img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-body.dark {
-  background: #121212;
-  color: #fff;
-}
-
-body.dark #cabecalho {
-  background: #1e1e1e;
-}
-
+/* BOTÃO TEMA (ORIGINAL) */
 #theme-toggle {
   background: transparent;
   border: 2px solid #fff;
@@ -147,7 +91,112 @@ body.dark #theme-toggle span {
   color: #ffd700;
 }
 
+/* SEÇÃO INICIAL */
+.tela-cheia {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
 
+#vitor {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* TEXTOS GERAIS */
+#container h1 {
+  font-size: 4rem;
+}
+
+#container p {
+  font-size: 1.3rem;
+}
+
+/* SOBRE */
+#sobre {
+  background: #fff;
+  color: #000;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#sobre h1 {
+  font-size: 2.3rem;
+}
+
+#sobre p {
+  font-size: 1.3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* HABILIDADES */
+.tela-2 {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.tela-2 h1 {
+  font-size: 2.3rem;
+}
+
+.tela-2 p {
+  font-size: 1.3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* PROJETOS */
+.projetos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 40px;
+  background: #fff;
+  color: #000;
+}
+
+.projetos h1 {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.projeto {
+  background: #eee;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.projeto img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* FOOTER */
+footer {
+  height: 300px;
+  background-color: #222;
+}
+
+/* DARK MODE */
+body.dark {
+  background: #121212;
+  color: #fff;
+}
+
+body.dark #cabecalho {
+  background: #1e1e1e;
+}
+
+/* DESKTOP */
 @media (min-width: 768px) {
   .menu-icon {
     display: none;
@@ -163,19 +212,25 @@ body.dark #theme-toggle span {
   #menu a {
     padding: 0 15px;
   }
-
-  .projetos {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 
+/* MOBILE */
 @media (max-width: 767px) {
+  #container h1 {
+    font-size: 2.2rem;
+  }
+
+  #container p {
+    font-size: 1.1rem;
+  }
+
   .projetos {
     grid-template-columns: 1fr;
+    padding: 20px;
   }
 }
 
-
+/* MATERIAL ICONS */
 .material-symbols-outlined {
   font-variation-settings:
     'FILL' 1,
