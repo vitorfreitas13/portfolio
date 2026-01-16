@@ -38,6 +38,11 @@ body {
 .menu-icon {
   cursor: pointer;
   font-size: 32px;
+  transition: transform 0.25s ease;
+}
+
+.menu-icon.ativo {
+  transform: rotate(90deg);
 }
 
 /* MENU MOBILE */
@@ -47,20 +52,20 @@ body {
   background: #000;
   display: none;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
   gap: 30px;
+  z-index: 999;
 }
 
 #menu a {
-  display: block;
-  padding: 15px;
+  font-size: 2rem;
   color: #fff;
   text-decoration: none;
-  font-size: 2rem;
 }
 
 #menu.ativo {
-  display: block;
+  display: flex;
 }
 
 /* BOTÃO TEMA (ORIGINAL) */
@@ -204,13 +209,16 @@ body.dark #cabecalho {
   }
 
   #menu {
-    display: flex;
     position: static;
-    width: auto;
+    display: flex;
+    flex-direction: row;
+    height: auto;
     background: none;
+    gap: 0;
   }
 
   #menu a {
+    font-size: 1rem;
     padding: 0 15px;
   }
 }
