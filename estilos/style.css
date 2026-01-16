@@ -37,6 +37,13 @@ body {
   z-index: 1;
 }
 
+.div-1 {
+    line-height: 25px;
+}
+
+.h1-de-vitor{
+    margin-top: 20px;
+}
 
 /* HEADER */
 #cabecalho {
@@ -239,6 +246,10 @@ body.dark #cabecalho {
     background: none;
     gap: 0;
   }
+
+  .div-1 {
+    line-height: 40px;
+}
 
   #menu a {
     font-size: 1rem;
