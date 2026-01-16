@@ -42,13 +42,13 @@ body {
 
 /* MENU MOBILE */
 #menu {
-  display: none;
-  position: absolute;
-  top: 70px;
-  left: 0;
-  width: 100%;
+  position: fixed;
+  inset: 0;
   background: #000;
-  text-align: center;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
 }
 
 #menu a {
@@ -56,6 +56,7 @@ body {
   padding: 15px;
   color: #fff;
   text-decoration: none;
+  font-size: 2rem;
 }
 
 #menu.ativo {
