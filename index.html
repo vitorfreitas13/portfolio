@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vitor Freitas | Portfólio</title>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet" />
+
     <link rel="stylesheet" href="estilos/style.css">
 </head>
 
@@ -14,7 +16,7 @@
     <header id="cabecalho">
         <a href="#inicio" class="logo">Portfólio</a>
 
-        <span class="material-symbols-outlined menu-icon" onclick="clickMenu()">
+        <span class="material-symbols-outlined menu-icon" onclick="clickMenu()" aria-label="Abrir menu">
             menu
         </span>
 
@@ -24,44 +26,37 @@
             <a href="#habilidades">Habilidades</a>
             <a href="#projetos">Projetos</a>
         </nav>
+
+        <button id="theme-toggle" aria-label="Alternar tema">
+            <span class="material-symbols-outlined"></span>
+        </button>
+
+
     </header>
 
     <main id="container">
-
-        <section id="inicio" class="tela-cheia inicio">
+        <section id="inicio" class="tela-cheia">
             <img id="vitor" src="imagens/vitor1.png" alt="Foto de Vitor Freitas">
-
-            <div class="inicio-texto">
+            <div>
                 <h1>Vitor Freitas</h1>
                 <p>Desenvolvedor Full Stack Júnior</p>
             </div>
         </section>
 
-
-        <section id="sobre" class="tela-cheia">
-            <h1 id="sobre-mim">Sobre Mim</h1>
+        <section id="sobre">
+            <h1>Sobre Mim</h1>
             <p>
-                Sou desenvolvedor Full Stack Júnior e atualmente curso Ciência da Computação.
-                Tenho contato com hardware e software desde 2012, construindo uma base sólida e apaixonado por
-                tecnologia.
-                Atualmente estudo frameworks front-end e back-end, aplicando o aprendizado em projetos práticos.
-                Busco minha primeira oportunidade para aprender, evoluir e contribuir com código de qualidade.
+                Sou desenvolvedor Full Stack Júnior e atualmente curso Ciência da Computação. Tenho contato com hardware
+                e software desde 2012, construindo uma base sólida e apaixonado por tecnologia. Atualmente estudo
+                frameworks front-end e back-end, aplicando o aprendizado em projetos práticos. Busco minha primeira
+                oportunidade para aprender, evoluir e contribuir com código de qualidade.
             </p>
-
         </section>
 
         <section id="habilidades" class="tela-2">
-            <h1 id="habili">Habilidades</h1>
+            <h1>Habilidades</h1>
             <p>
-                Tenho conhecimentos em desenvolvimento web e automação de processos, criando soluções simples e
-                funcionais. Trabalho com <strong>HTML</strong>, <strong>CSS</strong> e <strong>JavaScript</strong> para
-                construção de interfaces web, utilizando o <strong>LocalStorage</strong> para armazenamento de dados no
-                navegador.
-
-                Também possuo experiência com <strong>Python</strong>, desenvolvendo automações (<strong>RPA</strong>)
-                que simulam a interação humana com sistemas, incluindo leitura de planilhas <strong>Excel</strong> e
-                cadastro automático de informações. Tenho boa <strong>lógica de programação</strong>, organização de
-                código e foco em resolver problemas de forma prática e eficiente.
+                HTML, CSS, JavaScript, LocalStorage, Python e automação RPA com Excel.
             </p>
         </section>
 
@@ -69,37 +64,23 @@
             <h1>Projetos</h1>
 
             <div class="projeto">
-                
-                <h2>Projeto A</h2>
-                <p>Descrição breve do projeto A.</p>
+                <img src="imagens/projeto1-thumb.jpg" alt="Projeto D">
+                <h2><a href="https://vitorfreitas13.github.io/projeto-coffe/">Projeto D</a></h2>
+                <p>Landing page responsiva</p>
             </div>
+
             <div class="projeto">
-                
-                <h2>Projeto B</h2>
-                <p>Descrição breve do projeto B.</p>
-            </div>
-            <div class="projeto">
-                <h2>Projeto C</h2>
-                <p>Descrição breve do projeto C.</p>
-            </div>
-            <div class="projeto">
-                <img src="imagens/projeto1-thumb.jpg" alt="projeto d">
-                <h2><a href="https://vitorfreitas13.github.io/projeto-coffe/#about" >Projeto D</a></h2>
-                <p>Descrição breve do projeto D.</p>
-            </div>
-            <div class="projeto">
-                <img src="imagens/projeto2-thumb.jpg" alt="projeto e">
+                <img src="imagens/projeto2-thumb.jpg" alt="Projeto E">
                 <h2><a href="https://vitorfreitas13.github.io/projeto-tela-login/">Projeto E</a></h2>
-                <p>Descrição breve do projeto E.</p>
+                <p>Tela de login</p>
             </div>
+
             <div class="projeto">
-                <img src="imagens/projeto3-thumb.jpg" alt="projeto f">
+                <img src="imagens/projeto3-thumb.jpg" alt="Projeto F">
                 <h2><a href="https://vitorfreitas13.github.io/projeto-hamburguer/">Projeto F</a></h2>
-                <p>Descrição breve do projeto F.</p>
+                <p>Menu hamburguer</p>
             </div>
         </section>
-
-
     </main>
 
     <script src="script.js"></script>

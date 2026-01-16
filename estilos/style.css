@@ -1,225 +1,185 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Poppins", sans-serif;
-    padding-top: 80px;
-    /* espaço para o header fixo */
+  font-family: "Poppins", sans-serif;
+  padding-top: 80px;
+  background: #222;
+  color: #fff;
 }
 
-section {
-    margin-bottom: 80px;
-}
-
-
-/* HEADER */
 #cabecalho {
-    background: #000;
-    color: #fff;
-    padding: 15px 20px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+  background: #000;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 .logo {
-    color: #fff;
-    text-decoration: none;
-    font-size: 40px;
+  color: #fff;
+  font-size: 32px;
+  text-decoration: none;
 }
 
 .menu-icon {
-    cursor: pointer;
-    font-size: 32px;
+  cursor: pointer;
+  font-size: 32px;
 }
 
-/* MENU */
 #menu {
-    display: none;
-    position: absolute;
-    top: 70px;
-    left: 0;
-
-    width: 100%;
-    background: #000;
-    text-align: center;
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background: #000;
+  text-align: center;
 }
 
 #menu a {
-    display: block;
-    padding: 15px;
-    color: #fff;
-    text-decoration: none;
-}
-
-#menu a:hover {
-    background: #222;
+  display: block;
+  padding: 15px;
+  color: #fff;
+  text-decoration: none;
 }
 
 #menu.ativo {
-    display: block;
-}
-
-/* CONTAINER */
-#container {
-    background-color: #222;
-}
-
-/* CLASSE SEGURA PARA TELA CHEIA */
-
-
-
-
-/* INÍCIO */
-#inicio {
-    padding-top: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-
-    text-align: center;
-    color: #fff;
-    min-height: 80vh;
+  display: block;
 }
 
 
-
-#inicio2 h1 {
-    font-size: 2.8rem;
+.tela-cheia {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-/* IMAGEM */
 #vitor {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0px 0px 6px rgb(201, 200, 200);
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-/* SOBRE */
 #sobre {
-    background-color: #fff;
-    color: #000;
-    padding: 80px 20px;
-    text-align: center;
-    min-height: 450px;
-
-}
-
-#sobre h1 {
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-
-}
-
-#sobre p {
-    max-width: 800px;
-    margin: auto;
-    line-height: 1.6;
-    font-size: 1rem;
+  background: #fff;
+  color: #000;
+  padding: 60px 20px;
+  text-align: center;
 }
 
 .tela-2 {
-    padding: 80px 20px;
-    color: #fff;
-    text-align: center;
-    min-height: 450px;
-}
-
-
-#habilidades h1 {
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-}
-
-#habilidades p {
-    max-width: 800px;
-    margin: auto;
-    line-height: 1.6;
-    font-size: 1rem;
+  padding: 60px 20px;
+  text-align: center;
 }
 
 .projetos {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  padding: 20px;
-  max-width: 900px;
-  margin: auto;
-  background-color: #fff;
+  padding: 40px;
+  background: #fff;
+  color: #000;
 }
 
-.projetos > h1 {
+.projetos h1 {
   grid-column: 1 / -1;
   text-align: center;
-  margin-bottom: 30px;
-  font-size: 2rem;
 }
 
 .projeto {
-  background-color: #eee;
-  border: 1px solid #ccc;
-  padding: 20px;
-  text-align: center;
+  background: #eee;
+  padding: 15px;
   border-radius: 8px;
 }
 
-.projeto h2 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 1.4rem;
-}
-
-.projeto p {
-  margin: 0;
-  font-size: 1rem;
-  color: #555;
-}
-
-
 .projeto img {
   width: 100%;
-  height: auto;
-  border-radius: 8px 8px 0 0; /* borda arredondada só em cima */
-  display: block;
-  margin-bottom: 15px;
-  object-fit: cover; /* para a imagem cobrir o espaço sem distorcer */
-  max-height: 150px; /* altura máxima, ajusta conforme quiser */
+  border-radius: 8px;
 }
 
-/* DESKTOP */
+body.dark {
+  background: #121212;
+  color: #fff;
+}
+
+body.dark #cabecalho {
+  background: #1e1e1e;
+}
+
+#theme-toggle {
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#theme-toggle span {
+  font-size: 22px;
+  color: #fff;
+}
+
+body.dark #theme-toggle {
+  border-color: #fff;
+}
+
+body.dark #theme-toggle span {
+  color: #ffd700;
+}
+
+
 @media (min-width: 768px) {
-    .menu-icon {
-        display: none;
-    }
+  .menu-icon {
+    display: none;
+  }
 
-    #menu {
-        display: flex;
-        position: static;
-        width: auto;
-        background: transparent;
-    }
+  #menu {
+    display: flex;
+    position: static;
+    width: auto;
+    background: none;
+  }
 
-    #menu a {
-        display: inline-block;
-        padding: 0 15px;
-    }
+  #menu a {
+    padding: 0 15px;
+  }
+
+  .projetos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .projetos {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
 }
