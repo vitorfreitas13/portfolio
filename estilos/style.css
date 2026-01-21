@@ -26,7 +26,7 @@ body {
 }
 
 #vitor:hover {
-  transform: scale(1.5) rotate(-2deg);
+  transform: scale(1.05) rotate(1.1deg);
 }
 
 main#container {
@@ -339,6 +339,10 @@ body.dark #theme-toggle span {
   color: #000;
 }
 
+.projeto:hover {
+  scale: 1.05;
+}
+
 .projetos h1 {
   grid-column: 1 / -1;
   text-align: center;
@@ -460,6 +464,7 @@ body.dark #cabecalho {
     grid-template-columns: 1fr;
     padding: 20px;
   }
+
   
   footer {
     margin-bottom: 70px;
