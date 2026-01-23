@@ -67,14 +67,6 @@ section.aparece {
   transition: color 0.3s ease;
 }
 
-#menu {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-#menu.ativo {
-  opacity: 1;
-}
 
 footer {
   margin-bottom: 60px;
@@ -374,6 +366,11 @@ a:hover {
   border-radius: 8px;
 }
 
+.projeto-video {
+  width: 100%;
+  height: 213px;
+}
+
 /* FOOTER */
 footer {
   height: 200px;
@@ -413,17 +410,6 @@ ul {
   scale: calc(1.3);
 }
 
-
-
-/* DARK MODE */
-body.dark {
-  background: #121212;
-  color: #fff;
-}
-
-body.dark #cabecalho {
-  background: #1e1e1e;
-}
 
 /* DESKTOP */
 @media (min-width: 768px) {

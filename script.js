@@ -1,48 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-  // =======================
-  // MENU HEADER
-  // =======================
-  const menu = document.getElementById('menu');
-  const icon = document.querySelector('.menu-icon');
-
-  function clickMenu() {
-    menu.classList.toggle('ativo');
-    icon.classList.toggle('ativo');
-    icon.textContent = menu.classList.contains('ativo') ? 'close' : 'menu';
-  }
-  window.clickMenu = clickMenu;
-
-  // FECHAR MENU HEADER AO CLICAR EM UM LINK
-  document.querySelectorAll('#menu a').forEach(link => {
-    link.addEventListener('click', () => {
-      menu.classList.remove('ativo');
-      icon.classList.remove('ativo');
-      icon.textContent = 'menu';
-    });
-  });
-
-  // =======================
-  // DARK MODE
-  // =======================
-  const themeBtn = document.getElementById('theme-toggle');
-  const themeIcon = themeBtn.querySelector('span');
-
-  function updateThemeIcon() {
-    themeIcon.textContent = document.body.classList.contains('dark') ? 'light_mode' : 'brightness_4';
-  }
-
-  function toggleDark() {
-    document.body.classList.toggle('dark');
-    if (document.body.classList.contains('dark')) localStorage.setItem('dark', 'on');
-    else localStorage.removeItem('dark');
-    updateThemeIcon();
-  }
-
-  if (localStorage.getItem('dark')) document.body.classList.add('dark');
-  updateThemeIcon();
-  themeBtn.addEventListener('click', toggleDark);
-
   // =======================
   // BOTTOM NAV SCROLL
   // =======================
