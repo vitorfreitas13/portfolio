@@ -15,13 +15,26 @@
 
 <body>
     <header id="cabecalho">
-        <a> <img src="imagens/vf.png" alt="vf"></a>
+        <a class="logo-logo"> <img src="imagens/vf.png" alt="vf"></a>
 
         <nav id="menu">
-            <a href="#inicio">Início</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#habilidades">Habilidades</a>
-            <a href="#projetos">Projetos</a>
+
+            <ul class="menu">
+                <li>
+                    <a href="#inicio">Início</a>
+                </li>
+                <li>
+                    <a href="#sobre">Sobre</a>
+                </li>
+                <li>
+                    <a href="#habilidades">Habilidades</a>
+                </li>
+                <li>
+                    <a href="#projetos">Projetos</a>
+                </li>
+            </ul>
+
+
         </nav>
 
         <button class="cv">
@@ -32,11 +45,17 @@
 
     <main id="container">
         <section id="inicio" class="tela-cheia">
-            <img id="vitor" src="imagens/vitor1.png" alt="Foto de Vitor Freitas">
+
             <div class="div-1">
                 <h1 class="h1-de-vitor">Olá, Eu Sou Vitor Freitas</h1>
                 <p>Engenheiro de Software</p>
             </div>
+
+            <div class="div-0">
+                <img id="vitor" src="imagens/vitor1.png" alt="Foto de Vitor Freitas">
+            </div>
+
+
         </section>
 
         <section id="sobre">
@@ -86,7 +105,8 @@
             </div>
             <div class="projeto">
                 <video class="projeto-video" src="videos/Automação_completo.mp4"></video>
-                <h2><a href="https://vitorfreitas13.github.io/projeto-site-cadastro/" target="_blank">Automação de Relatório</a></h2>
+                <h2><a href="https://vitorfreitas13.github.io/projeto-site-cadastro/" target="_blank">Automação de
+                        Relatório</a></h2>
                 <p>PYTHON, PANDAS & PYAUTOGUI</p>
             </div>
             <div class="projeto">
