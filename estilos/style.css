@@ -9,6 +9,12 @@
   outline: 1px solid red;
 }
 
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -34,6 +40,11 @@ body {
   padding: 0 30px;
   box-shadow: 0px 0px 10px #73f8fd83;
   transition: 0.5s;
+}
+
+header {
+  width: 100%;
+  max-width: 100%;
 }
 
 header nav ul {
@@ -363,7 +374,8 @@ ul {
   /* PROJETOS */
 .projetos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax (280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax (260px, 1fr));
+  width: 100%;
   gap: 20px;
   padding: 20px;
 }
