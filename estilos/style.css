@@ -380,7 +380,7 @@ ul {
 
   .projetos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax (260px, 1fr));
+    grid-template-columns: 1fr;
     width: 100%;
     gap: 20px;
     padding: 20px;
@@ -400,7 +400,17 @@ ul {
     max-width: 100%;
   }
 
+  .projeto h2 {
+    font-size: 1.2rem;
+  }
+
+  .projeto p {
+    font-size: 0.9rem
+  }
+
   .projeto {
+    max-width: 100%;
+    padding: 16px;
     width: 100%;
     overflow: hidden;
     box-sizing: border-box;
