@@ -32,6 +32,7 @@ body {
   gap: 20px;
   padding: 0 30px;
   box-shadow: 0px 0px 10px #73f8fd83;
+  transition: 0.5s;
 }
 
 header nav ul {
@@ -66,6 +67,7 @@ header nav ul li:hover::after {
   width: 100px;
   border-radius: 50%;
   padding: 10px;
+  transition: 0.5s;
 }
 
 #vitor {
@@ -82,6 +84,11 @@ header nav ul li:hover::after {
 
 #vitor:hover {
   transform: scale(1.05) rotate(1.1deg);
+}
+
+#inicio {
+  display: flex;
+  gap: 20px;
 }
 
 section {
@@ -142,7 +149,6 @@ footer {
 }
 
 .bottom-nav {
-  border-radius: 50%;
   margin-top: 4px;
 }
 
@@ -176,87 +182,14 @@ footer {
   transform: translateY(-3px);
 }
 
-
-@media screen and (max-width: 768px) {
-
-  /* Mostrar bottom nav */
-  .bottom-nav {
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #111;
-    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.7);
-    z-index: 1000;
-  }
-
-  footer {
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-  }
-}
-
-
-#inicio {
-  position: relative;
-}
-
-#inicio::before {
-  content: "";
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 0;
-}
-
-#inicio * {
-  position: relative;
-  z-index: 1;
-}
-
-.div-1 {
-  line-height: 50px;
-}
-
-.h1-de-vitor {
-  margin-top: 20px;
-}
-
-.logo {
-  color: #fff;
-  font-size: 32px;
-  text-decoration: none;
-}
-
-
-/* SEÇÃO INICIAL */
-.tela-cheia {
-  text-align: center;
-  display: flex;
-  /* Usa o Flexbox para organizar os elementos */
-  align-items: center;
-  /* Alinha os itens verticalmente ao centro */
-  justify-content: space-around;
-  /* Espaçamento interno */
-  height: 100vh;
-  padding-top: 100px;
-}
-
-
-
 /* TEXTOS GERAIS */
-
 .titulos {
   font-size: 2.8rem;
   text-align: center;
 }
 
 .div-1 h1 {
-  font-size: 48px;
+  font-size: 3rem;
   text-align: left;
 }
 
@@ -311,10 +244,6 @@ footer {
   color: #000;
 }
 
-.projeto:hover {
-  scale: 1.05;
-}
-
 .projetos h1 {
   grid-column: 1 / -1;
   text-align: center;
@@ -361,6 +290,126 @@ footer h3 {
 ul {
   list-style-type: none;
 }
+
+
+
+@media screen and (max-width: 700px) {
+
+  /* Mostrar bottom nav */
+  .bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #111;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+  }
+
+  .div-1 h1 {
+    font-size: 1.9rem;
+    text-align: center;
+  }
+
+  .div-1 p {
+    text-align: center;
+    line-height: 10px;
+    font-weight: 100;
+  }
+
+  footer {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  #cabecalho {
+    height: 60px;
+  }
+
+  .logo-logo {
+    width: 60px;
+    border-radius: 50%;
+    padding: 10px;
+  }
+
+  #inicio {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    gap: 0;
+  }
+
+  #vitor {
+    /* IMAGEM */
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: ease  0.9s;
+  }
+
+  .div-1{
+    padding-bottom: 150px;
+    transition: 0.9s;
+  }
+}
+
+
+#inicio {
+  position: relative;
+}
+
+#inicio::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+#inicio * {
+  position: relative;
+  z-index: 1;
+}
+
+.div-1 {
+  line-height: 50px;
+}
+
+.h1-de-vitor {
+  margin-top: 20px;
+}
+
+.logo {
+  color: #fff;
+  font-size: 32px;
+  text-decoration: none;
+}
+
+
+/* SEÇÃO INICIAL */
+.tela-cheia {
+  text-align: center;
+  display: flex;
+  /* Usa o Flexbox para organizar os elementos */
+  align-items: center;
+  /* Alinha os itens verticalmente ao centro */
+  justify-content: space-around;
+  /* Espaçamento interno */
+  height: 100vh;
+  padding-top: 100px;
+}
+
+
+
 
 .lista-logos {
   display: flex;
