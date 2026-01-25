@@ -373,6 +373,11 @@ ul {
   }
 
   /* PROJETOS */
+  .titulos {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
   .projetos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax (260px, 1fr));
