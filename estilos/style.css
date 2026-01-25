@@ -358,6 +358,24 @@ ul {
     padding-bottom: 150px;
     transition: 0.9s;
   }
+
+  /* PROJETOS */
+.projetos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax (280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.projeto img {
+  max-width: 100%;
+  height: auto;
+}
+
+.projeto-video {
+  max-width: 100%;
+  height: auto;
+}
 }
 
 
