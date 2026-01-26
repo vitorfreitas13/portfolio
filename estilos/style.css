@@ -346,8 +346,13 @@ ul {
     z-index: 1000;
   }
 
+  .div-0 {
+    padding-top: 40px;
+  }
+
   .div-1 {
-    padding-top: 50px;
+    padding-top: 0;
+    padding-bottom: 80px;
   }
 
   .div-1 p {
