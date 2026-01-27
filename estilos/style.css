@@ -408,7 +408,8 @@ ul {
 
   .div-1 p {
     text-align: center;
-    font-weight: 100;
+    font-size: 1.2rem;
+    font-weight: 400;
   }
 
   .engenheiro {
@@ -446,19 +447,19 @@ ul {
     padding-bottom: calc(env(safe-area-inset-bottom) + 6px);
   }
 
-
-  .div-0 {
-    padding-top: 40px;
-  }
-
   .div-1 {
     padding-top: 0;
-    padding-bottom: 80px;
+    padding-bottom: 150px;
+  }
+
+  .div-1 h1 {
+    font-size: 1.8rem;
   }
 
   .div-1 p {
+    font-size: 1rem;
     text-align: center;
-    font-weight: 100;
+    font-weight: 400;
   }
 
   footer {
