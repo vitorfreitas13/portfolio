@@ -92,6 +92,7 @@ header nav ul li:hover::after {
 }
 
 #inicio {
+  position: relative;
   display: flex;
   gap: 20px;
   background-color: #0f172a;
@@ -109,11 +110,7 @@ section.aparece {
 }
 
 /* Estilo da Bottom Navigation */
-.bottom-nav {
-  display: none;
-  /* inicialmente escondida */
-}
-
+/* inicialmente escondida */
 .bottom-nav a {
   flex: 1;
   color: #aaa;
@@ -152,7 +149,9 @@ section.aparece {
 }
 
 .bottom-nav {
+  display: none;
   margin-top: 4px;
+
 }
 
 
@@ -327,7 +326,7 @@ section.aparece {
 }
 
 .projetos h2,
-p {
+.projetos p {
   text-align: center;
 }
 
@@ -396,6 +395,10 @@ ul {
 
 @media screen and (max-width: 790px) {
 
+  body {
+    padding-bottom: 70px;
+  }
+
   /* Mostrar bottom nav */
   .bottom-nav {
     display: flex;
@@ -407,6 +410,11 @@ ul {
     box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.7);
     z-index: 1000;
   }
+
+  .bottom-nav {
+    padding-bottom: calc(env(safe-area-inset-bottom) + 6px);
+  }
+
 
   .div-0 {
     padding-top: 40px;
@@ -424,7 +432,6 @@ ul {
 
   footer {
     padding-top: 20px;
-    margin-bottom: 90px;
   }
 
   #menu {
@@ -521,10 +528,6 @@ ul {
   }
 }
 
-
-#inicio {
-  position: relative;
-}
 
 #inicio::before {
   content: "";
