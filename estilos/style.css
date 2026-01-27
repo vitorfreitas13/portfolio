@@ -8,12 +8,6 @@
   font-family: "Poppins", sans-serif;
 }
 
-html,
-body {
-  width: 100%;
-  max-width: 100%;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -21,7 +15,7 @@ html {
 
 /* BODY */
 body {
-  background: #181717;
+  background: #0f172a;
   color: #fff;
   overflow-x: hidden;
 }
@@ -100,6 +94,7 @@ header nav ul li:hover::after {
 #inicio {
   display: flex;
   gap: 20px;
+  background-color: #0f172a;
 }
 
 section {
@@ -148,9 +143,6 @@ section.aparece {
   scale: 1.05;
 }
 
-footer {
-  margin-bottom: 60px;
-}
 
 .bottom-nav a.active::after {
   content: '';
@@ -195,8 +187,9 @@ footer {
 
 /* TEXTOS GERAIS */
 .titulos {
-  font-size: 2.8rem;
   text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
 }
 
 .div-1 {
@@ -227,10 +220,13 @@ footer {
 
 /* SOBRE */
 #sobre {
+  height: 100vh;
   background: #fff;
   color: #000;
-  padding: 60px 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #sobre p {
@@ -240,10 +236,71 @@ footer {
   padding: 0 15px;
 }
 
+
+
+
 /* HABILIDADES */
-.tela-2 {
-  padding: 60px 20px;
+/* Container dos cards */
+.habilidades-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Card */
+.habilidade-card {
   text-align: center;
+  background-color: #020617;
+  border-radius: 12px;
+  padding: 1.8rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.habilidade-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+/* Título do card */
+.habilidade-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #38bdf8;
+  /* azul destaque */
+}
+
+/* Lista */
+.habilidade-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Skills como "badges" */
+.habilidade-card li {
+  display: inline-block;
+  background-color: #1e293b;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin: 0.3rem 0.3rem 0 0;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.habilidade-card li:hover {
+  background-color: #38bdf8;
+  color: #020617;
+  transform: scale(1.05);
+}
+
+.tela-2 {
+  padding: 4rem 1.5rem;
+  background-color: #0f172a;
+  /* fundo escuro moderno */
+  color: #e5e7eb;
 }
 
 
@@ -297,14 +354,10 @@ a {
 
 /* FOOTER */
 footer {
-  height: 200px;
-  background-color: #222;
+  padding-top: 40px;
+  height: 300px;
+  background-color: #0f172a;
   text-align: center;
-  margin-bottom: 0;
-}
-
-footer h3 {
-  padding-top: 10px;
 }
 
 ul {
@@ -317,6 +370,7 @@ ul {
     line-height: 30px;
     padding-top: 150px;
   }
+
   .div-1 h1 {
     font-size: 2rem;
     text-align: center;
@@ -329,6 +383,14 @@ ul {
 
   .engenheiro {
     font-size: 1.4rem;
+  }
+
+  .titulos {
+    font-size: 1.8rem;
+  }
+
+  .habilidade-card {
+    padding: 1.5rem;
   }
 }
 
@@ -361,8 +423,8 @@ ul {
   }
 
   footer {
-    padding-bottom: 0px;
-    margin-bottom: 0px;
+    padding-top: 20px;
+    margin-bottom: 90px;
   }
 
   #menu {
@@ -402,6 +464,18 @@ ul {
     text-align: center;
   }
 
+  .tela-2 {
+    padding: 3rem 1rem;
+  }
+
+  .habilidade-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .habilidade-card li {
+    font-size: 0.85rem;
+  }
+
   .projetos {
     display: grid;
     grid-template-columns: 1fr;
@@ -422,10 +496,6 @@ ul {
     margin: 0;
     padding: 8px;
     max-width: 100%;
-  }
-
-  .projeto h2 {
-    font-size: 1.2rem;
   }
 
   .projeto p {
@@ -525,4 +595,3 @@ ul {
     'GRAD' 0,
     'opsz' 24;
 }
-
