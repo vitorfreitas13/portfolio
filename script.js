@@ -7,10 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', () => {
     const scrollPos = window.scrollY + window.innerHeight / 2;
+
     sections.forEach(sec => {
       const id = sec.getAttribute('id');
       const top = sec.offsetTop;
       const bottom = top + sec.offsetHeight;
+
       if (scrollPos >= top && scrollPos < bottom) {
         bottomLinks.forEach(a => a.classList.remove('active'));
         const link = document.querySelector(`.bottom-nav a[href="#${id}"]`);
@@ -19,10 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // EFEITO DE PULSE NOS LINKS
+  // EFEITO DE PULSE NOS LINKS (DESKTOP)
   bottomLinks.forEach(link => {
-    link.addEventListener('mouseenter', () => link.style.transform = 'translateY(-5px)');
-    link.addEventListener('mouseleave', () => link.style.transform = 'translateY(0)');
+    link.addEventListener('mouseenter', () => {
+      link.style.transform = 'translateY(-5px)';
+    });
+    link.addEventListener('mouseleave', () => {
+      link.style.transform = 'translateY(0)';
+    });
   });
 
   // =======================
@@ -33,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (entry.isIntersecting) {
         entry.target.classList.add('aparece');
 
-        // Cascata: animação dos filhos
         const children = entry.target.children;
         Array.from(children).forEach((child, i) => {
           child.style.transition = `opacity 0.6s ease ${i * 0.2}s, transform 0.6s ease ${i * 0.2}s`;
@@ -46,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   sections.forEach(sec => {
     Array.from(sec.children).forEach(child => {
+      if (child.classList.contains('projeto')) return;
       child.style.opacity = 0;
       child.style.transform = 'translateY(20px)';
     });
@@ -71,4 +77,30 @@ document.addEventListener('DOMContentLoaded', () => {
     projectObserver.observe(proj);
   });
 
+  // =======================
+  // MODAL DO VÍDEO (AUTOMAÇÃO)
+  // =======================
+  const automacaoCard = document.querySelector('.projeto-automacao');
+  const modal = document.getElementById('videoModal');
+  const video = document.getElementById('modalVideo');
+  const closeBtn = document.querySelector('.close-modal');
+
+  if (automacaoCard && modal && video && closeBtn) {
+    automacaoCard.addEventListener('click', () => {
+      modal.classList.add('active');
+      video.currentTime = 0;
+      video.play();
+    });
+
+    function fecharModal() {
+      modal.classList.remove('active');
+      video.pause();
+    }
+
+    closeBtn.addEventListener('click', fecharModal);
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) fecharModal();
+    });
+  }
 });

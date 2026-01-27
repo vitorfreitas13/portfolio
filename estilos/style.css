@@ -343,10 +343,44 @@ a {
   border-radius: 8px;
 }
 
-.projeto-video {
-  width: 100%;
-  height: 213px;
+.projeto:hover{
+    cursor: pointer;
+  }
+
+.video-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
 }
+
+.video-modal.active {
+  display: flex;
+}
+
+.video-container {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+}
+
+.video-container video {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.close-modal {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  font-size: 32px;
+  color: #fff;
+  cursor: pointer;
+}
+
 
 /* FOOTER */
 footer {
@@ -515,11 +549,6 @@ ul {
   }
 
   .projeto img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .projeto-video {
     max-width: 100%;
     height: auto;
   }
