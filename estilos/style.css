@@ -322,6 +322,13 @@ section.aparece {
   text-align: center;
 }
 
+.projeto span {
+    display: block;
+    text-align: center;
+    margin-top: 8px;
+    font-weight: 600;
+}
+
 .projetos h2,
 .projetos p {
   text-align: center;
@@ -502,6 +509,7 @@ ul {
     font-size: 1.8rem;
     text-align: center;
   }
+  
 
   .tela-2 {
     padding: 3rem 1rem;
@@ -529,6 +537,13 @@ ul {
     word-break: break-all;
     text-align: center;
   }
+  .projeto {
+    max-width: 100%;
+    padding: 16px;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
 
   .projeto h2,
   .projeto p {
@@ -539,14 +554,6 @@ ul {
 
   .projeto p {
     font-size: 0.9rem
-  }
-
-  .projeto {
-    max-width: 100%;
-    padding: 16px;
-    width: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
   }
 
   .projeto img {
