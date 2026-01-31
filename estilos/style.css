@@ -454,9 +454,12 @@ ul {
     padding-bottom: calc(env(safe-area-inset-bottom) + 6px);
   }
 
+  .div-0 {
+    padding-top: 50px;
+  }
+
   .div-1 {
     padding-top: 0;
-    padding-bottom: 150px;
   }
 
   .div-1 h1 {
@@ -498,9 +501,6 @@ ul {
     /* IMAGEM */
     width: 250px;
     height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-    transition: 0.9s;
   }
 
 
